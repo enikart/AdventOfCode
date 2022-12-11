@@ -40,7 +40,7 @@ class Exercise extends React.Component<ExerciseProps, any> {
 
         return (
             <div>
-                <a href={"https://adventofcode.com/"+this.state.yearNumber+"/day/"+this.state.exerciseNumber}>Link from the exercise</a>
+                <a target={"_blank"} href={"https://adventofcode.com/"+this.state.yearNumber+"/day/"+this.state.exerciseNumber}>Link from the exercise</a>
                 <p>Answer for the day : <span id={"answer"}>{this.state.answer}</span></p>
                 {execute_help}
                 <Button variant="contained" onClick={this.state.exec}>Execute</Button>
