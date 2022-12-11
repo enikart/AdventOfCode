@@ -8,7 +8,8 @@ export type ExerciseProps = {
     yearNumber: number,
     exerciseNumber: number,
     answer: string,
-    exec: () => void
+    rightAnswer: string,
+    exec: () => void,
 }
 
 export type YearNavigatorProps = {
