@@ -1,5 +1,6 @@
 import React from "react";
 import ExerciseComponent from "../../../components/exercise/ExerciseComponent";
+import input from "./input";
 
 class Day0101 extends React.Component<any, any> {
     state: {
@@ -7,9 +8,33 @@ class Day0101 extends React.Component<any, any> {
     }
 
     execute() {
-        // code
+        // First, we need to split the inventories by Elf
+        // To do that, we know that there's a blank line between each inventory
+        let inputParsed = input.split("\n\n");
+        console.log(inputParsed);
+
+        let moreCarryingElf: number = 0;
+
+        // For each inventory
+        inputParsed.forEach(item =>  {
+            let caloriesArray = item.split("\n");
+            let totalElfCalories: number = 0;
+
+            // we'll calculate the total amount of calories carried by the Elf
+            // by adding each food calories together
+            caloriesArray.forEach(food => {
+                totalElfCalories += +food;
+            });
+
+            // We only store the value if the current Inventory has more calories than the previous "best carry"
+            if (totalElfCalories > moreCarryingElf) {
+                moreCarryingElf = totalElfCalories;
+            }
+        });
+
+        // tadam
         this.setState({
-            answer: "SALUT LA REPONSE"
+            answer: moreCarryingElf.toString()
         });
     }
 
