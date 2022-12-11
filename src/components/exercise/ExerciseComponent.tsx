@@ -9,7 +9,8 @@ class Exercise extends React.Component<ExerciseProps, any> {
         yearNumber: number,
         exerciseNumber: number,
         answer: string,
-        exec: () => void
+        exec: () => void,
+        rightAnswer: string,
     }
 
     constructor(props: ExerciseProps) {
@@ -19,7 +20,8 @@ class Exercise extends React.Component<ExerciseProps, any> {
             yearNumber: props.yearNumber,
             exerciseNumber: props.exerciseNumber,
             answer: props.answer,
-            exec: props.exec
+            exec: props.exec,
+            rightAnswer: props.rightAnswer,
         }
     }
 
@@ -35,13 +37,14 @@ class Exercise extends React.Component<ExerciseProps, any> {
     render() {
         let execute_help;
         if (this.state.answer.length === 0) {
-            execute_help = <p>To have the answer, please execute the code by clicking here : </p>;
+            execute_help = <p>To have the result of my code, please execute the code by clicking here : </p>;
         }
 
         return (
             <div>
                 <a target={"_blank"} href={"https://adventofcode.com/"+this.state.yearNumber+"/day/"+this.state.exerciseNumber}>Link from the exercise</a>
-                <p>Answer for the day : <span id={"answer"}>{this.state.answer}</span></p>
+                <p>Answer from my code : <span id={"answer"}>{this.state.answer}</span></p>
+                <p>Expected Answer for the day : {this.state.rightAnswer}</p>
                 {execute_help}
                 <Button variant="contained" onClick={this.state.exec}>Execute</Button>
             </div>

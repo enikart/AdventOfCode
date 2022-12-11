@@ -11,9 +11,8 @@ class Day0101 extends React.Component<any, any> {
         // First, we need to split the inventories by Elf
         // To do that, we know that there's a blank line between each inventory
         let inputParsed = input.split("\n\n");
-        console.log(inputParsed);
 
-        let moreCarryingElf: number = 0;
+        let bestCarryElf: number = 0;
 
         // For each inventory
         inputParsed.forEach(item =>  {
@@ -27,14 +26,14 @@ class Day0101 extends React.Component<any, any> {
             });
 
             // We only store the value if the current Inventory has more calories than the previous "best carry"
-            if (totalElfCalories > moreCarryingElf) {
-                moreCarryingElf = totalElfCalories;
+            if (totalElfCalories > bestCarryElf) {
+                bestCarryElf = totalElfCalories;
             }
         });
 
         // tadam
         this.setState({
-            answer: moreCarryingElf.toString()
+            answer: bestCarryElf.toString()
         });
     }
 
@@ -52,7 +51,7 @@ class Day0101 extends React.Component<any, any> {
         return (
             <div>
                 <h2>Exercise 01 Part 1</h2>
-                <ExerciseComponent yearNumber={2022} exerciseNumber={1} answer={this.state.answer} exec={this.execute}/>
+                <ExerciseComponent yearNumber={2022} exerciseNumber={1} answer={this.state.answer} rightAnswer={"72240"} exec={this.execute}/>
             </div>
         );
     }
