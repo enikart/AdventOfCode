@@ -1,33 +1,8 @@
 import React from "react";
 import ExerciseComponent from "../../../components/exercise/ExerciseComponent";
 import input from "./input";
+import {MyPlays, MyPlaysPoints, OpponentPlays, RoundResult, RoundResultPoints} from "./assets/enums";
 
-enum OpponentPlays {
-    Rock = "A",
-    Paper = "B",
-    Scissors = "C",
-}
-enum MyPlays {
-    Rock = "X",
-    Paper = "Y",
-    Scissors = "Z",
-}
-enum MyPlaysPoints {
-    Rock = 1,
-    Paper = 2,
-    Scissors = 3,
-}
-enum RoundResultPoints {
-    Win = 6,
-    Lose = 0,
-    Draw = 3,
-}
-
-enum RoundResult {
-    Win = 1,
-    Lose = -1,
-    Draw = 0,
-}
 
 class Day0201 extends React.Component<any, any> {
     state: {
