@@ -66,7 +66,7 @@ class Day0302 extends React.Component<any, any> {
         return (
             <div>
                 <h2>Exercise 03 Part 2</h2>
-                <ExerciseComponent yearNumber={2022} exerciseNumber={3} answer={this.state.answer} rightAnswer={"2585"} exec={this.execute}/>
+                <ExerciseComponent yearNumber={2022} exerciseNumber={3} answer={this.state.answer} rightAnswer={"2479"} exec={this.execute}/>
             </div>
         );
     }
