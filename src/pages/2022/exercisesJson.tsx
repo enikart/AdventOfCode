@@ -9,6 +9,8 @@ import Day0401 from "./day04/Day0401";
 import Day0402 from "./day04/Day0402";
 import Day0501 from "./day05/Day0501";
 import Day0502 from "./day05/Day0502";
+import Day0601 from "./day06/Day0601";
+import Day0602 from "./day06/Day0602";
 
 export var exercisesJson: Exercise[] = [
   {
@@ -80,5 +82,19 @@ export var exercisesJson: Exercise[] = [
     "component": Day0502,
     "key": "2022_05_2",
     "link": "05-02"
+  },
+  {
+    "day": 6,
+    "part": 1,
+    "component": Day0601,
+    "key": "2022_06_1",
+    "link": "06-01"
+  },
+  {
+    "day": 6,
+    "part": 2,
+    "component": Day0602,
+    "key": "2022_06_2",
+    "link": "06-02"
   },
 ];
