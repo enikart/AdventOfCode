@@ -2,7 +2,6 @@ import React from "react";
 import {exercisesJson} from "./exercisesJson";
 import YearNavigator from "../../components/year/YearNavigatorComponent";
 import {Exercise} from "../../types/exercisesProps";
-import Day0101 from "./day01/Day0101";
 
 class Year2022 extends React.Component<any, any> {
     state: {

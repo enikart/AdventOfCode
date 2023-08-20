@@ -2,7 +2,6 @@ import React from "react";
 import {Link, Route, Routes} from "react-router-dom";
 import {YearNavigatorProps} from "../../types/propsTypes";
 import {Exercise} from "../../types/exercisesProps";
-import DayOnePartOne from "../../pages/2022/day01/Day0101";
 
 class YearNavigator extends React.Component<YearNavigatorProps, any> {
     state: {
