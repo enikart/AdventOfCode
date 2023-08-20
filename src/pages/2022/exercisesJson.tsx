@@ -99,4 +99,18 @@ export var exercisesJson: Exercise[] = [
     "key": "2022_06_2",
     "link": "06-02"
   },
+  {
+    "day": 7,
+    "part": 1,
+    "component": Day0701,
+    "key": "2022_07_1",
+    "link": "07-01"
+  },
+  {
+    "day": 7,
+    "part": 2,
+    "component": Day0702,
+    "key": "2022_07_2",
+    "link": "07-02"
+  },
 ];
