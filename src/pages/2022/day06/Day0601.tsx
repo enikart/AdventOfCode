@@ -7,54 +7,33 @@ class Day0601 extends React.Component<any, any> {
         answer: string
     }
 
-    getStartMap(input: string): string[][] {
-        let map: string[][] = [];
-        let inputParsed = input.split('\n');
-        let stackNumbers = inputParsed[inputParsed.length - 1].split('  ').length;
-        while (map.length < stackNumbers) {
-            map.push([]);
-        }
+    execute() {
+        let marker: string[] = [];
+        let answer: number = 0;
 
-        for (let i = 0; i < (inputParsed.length - 1); i++) {
-            for (let j = 0; j < stackNumbers; j++) {
-                if (inputParsed[i][j * 4 + 1] !== ' ') {
-                    map[j].push(inputParsed[i][j * 4 + 1]);
+        for (let i = 0; i < input.length; i++) {
+            if (!marker.includes(input[i])) {
+                marker.push(input[i]);
+
+                if (marker.length === 4) {
+                    answer = i + 1;
+                    break;
+                }
+            } else {
+                marker.push(input[i]);
+                let markerResetted = false;
+                while (!markerResetted) {
+                    if (marker[0] === input[i]) {
+                        markerResetted = true;
+                    }
+                    marker.shift();
                 }
             }
         }
 
-        return map;
-    }
-
-    makeMove(map: string[][], move: number, from: number, to: number): string[][] {
-        for (let i = 0; i < move; i++) {
-            let crateMoving = map[from - 1].shift();
-            if (crateMoving) {
-                map[to-1].unshift(crateMoving);
-            }
-        }
-        return map;
-    }
-
-    execute() {
-        let inputParsed = input.split("\n\n");
-        let map = this.getStartMap(inputParsed[0]);
-        let moves = inputParsed[1].split('\n');
-
-        moves.forEach(move => {
-            let moveParsed = move.split(' ');
-            moveParsed = moveParsed.filter(item => !isNaN(parseInt(item)));
-            this.makeMove(map, parseInt(moveParsed[0]), parseInt(moveParsed[1]), parseInt(moveParsed[2]));
-        });
-
-        let answer = '';
-
-        for (let i = 0; i < map.length; i++) {
-            answer += map[i][0];
-        }
 
         this.setState({
-            answer: answer
+            answer: answer.toString()
         });
     }
 
@@ -71,8 +50,8 @@ class Day0601 extends React.Component<any, any> {
     render() {
         return (
             <div>
-                <h2>Exercise 05 Part 1</h2>
-                <ExerciseComponent yearNumber={2022} exerciseNumber={5} answer={this.state.answer} rightAnswer={"CVCWCRTVQ"} exec={this.execute}/>
+                <h2>Exercise 06 Part 1</h2>
+                <ExerciseComponent yearNumber={2022} exerciseNumber={6} answer={this.state.answer} rightAnswer={"1929"} exec={this.execute}/>
             </div>
         );
     }
