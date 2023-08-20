@@ -1,22 +1,7 @@
 import React from "react";
 import ExerciseComponent from "../../../components/exercise/ExerciseComponent";
 import input from "./input";
-import {Simulate} from "react-dom/test-utils";
-import change = Simulate.change;
-
-interface IFile {
-    size: number,
-    name: string
-}
-interface IDirectory {
-    size: number,
-    childrenFile: IFile[],
-    childrenDirectory: IFileTreeStructure,
-}
-
-interface IFileTreeStructure {
-    [key: string]: IDirectory,
-}
+import {IDirectory, IFileTreeStructure} from "./interfaces/fileStructureInterfaces";
 
 class Day0701 extends React.Component<any, any> {
     state: {
@@ -28,6 +13,7 @@ class Day0701 extends React.Component<any, any> {
             size: 0,
             childrenFile: [],
             childrenDirectory: {},
+            name: newDir
         };
     }
 
@@ -58,6 +44,7 @@ class Day0701 extends React.Component<any, any> {
             size: -1,
             childrenFile: [],
             childrenDirectory: {},
+            name: ''
         };
 
         currentPath.forEach(path => {
@@ -98,6 +85,7 @@ class Day0701 extends React.Component<any, any> {
             size: 0,
             childrenFile: [],
             childrenDirectory: {},
+            name: '/'
         };
 
         inputParsed.forEach(command => {
