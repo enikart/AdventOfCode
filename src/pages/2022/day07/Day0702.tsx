@@ -2,7 +2,7 @@ import React from "react";
 import ExerciseComponent from "../../../components/exercise/ExerciseComponent";
 import input from "./input";
 
-class Day0602 extends React.Component<any, any> {
+class Day0702 extends React.Component<any, any> {
     state: {
         answer: string
     }
@@ -50,11 +50,11 @@ class Day0602 extends React.Component<any, any> {
     render() {
         return (
             <div>
-                <h2>Exercise 06 Part 2</h2>
-                <ExerciseComponent yearNumber={2022} exerciseNumber={6} answer={this.state.answer} rightAnswer={"3298"} exec={this.execute}/>
+                <h2>Exercise 07 Part 2</h2>
+                <ExerciseComponent yearNumber={2022} exerciseNumber={7} answer={this.state.answer} rightAnswer={"CNSCZWLVT"} exec={this.execute}/>
             </div>
         );
     }
 }
 
-export default Day0602;
+export default Day0702;

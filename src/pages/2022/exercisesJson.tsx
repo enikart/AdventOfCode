@@ -11,6 +11,8 @@ import Day0501 from "./day05/Day0501";
 import Day0502 from "./day05/Day0502";
 import Day0601 from "./day06/Day0601";
 import Day0602 from "./day06/Day0602";
+import Day0701 from "./day07/Day0701";
+import Day0702 from "./day07/Day0702";
 
 export var exercisesJson: Exercise[] = [
   {
