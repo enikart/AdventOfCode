@@ -1,8 +1,8 @@
 import {Exercise} from "../../types/exercisesProps";
 import Day0101 from "./day01/Day0101";
 import Day0102 from "./day01/Day0102";
-// import Day0201 from "./day02/Day0201";
-// import Day0202 from "./day02/Day0202";
+import Day0201 from "./day02/Day0201";
+import Day0202 from "./day02/Day0202";
 // import Day0301 from "./day03/Day0301";
 // import Day0302 from "./day03/Day0302";
 // import Day0401 from "./day04/Day0401";
@@ -31,20 +31,20 @@ export var exercisesJson: Exercise[] = [
     "key": "2023_01_2",
     "link": "01-02"
   },
-  // {
-  //   "day": 2,
-  //   "part": 1,
-  //   "component": Day0201,
-  //   "key": "2023_02_1",
-  //   "link": "02-01"
-  // },
-  // {
-  //   "day": 2,
-  //   "part": 2,
-  //   "component": Day0202,
-  //   "key": "2023_02_2",
-  //   "link": "02-02"
-  // },
+  {
+    "day": 2,
+    "part": 1,
+    "component": Day0201,
+    "key": "2023_02_1",
+    "link": "02-01"
+  },
+  {
+    "day": 2,
+    "part": 2,
+    "component": Day0202,
+    "key": "2023_02_2",
+    "link": "02-02"
+  },
   // {
   //   "day": 3,
   //   "part": 1,
