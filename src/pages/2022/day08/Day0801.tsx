@@ -49,11 +49,11 @@ class Day0801 extends React.Component<any, any> {
             isVisible = 1;
         }
 
-        for (let k = j; k >= 0; k--) {
-            if () {
-                
-            }
-        }
+        // for (let k = j; k >= 0; k--) {
+        //     if () {
+        //
+        //     }
+        // }
 
         return isVisible;
     }
