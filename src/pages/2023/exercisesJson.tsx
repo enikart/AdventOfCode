@@ -5,8 +5,8 @@ import Day0201 from "./day02/Day0201";
 import Day0202 from "./day02/Day0202";
 import Day0301 from "./day03/Day0301";
 import Day0302 from "./day03/Day0302";
-// import Day0401 from "./day04/Day0401";
-// import Day0402 from "./day04/Day0402";
+import Day0401 from "./day04/Day0401";
+import Day0402 from "./day04/Day0402";
 // import Day0501 from "./day05/Day0501";
 // import Day0502 from "./day05/Day0502";
 // import Day0601 from "./day06/Day0601";
@@ -59,20 +59,20 @@ export var exercisesJson: Exercise[] = [
     "key": "2023_03_2",
     "link": "03-02"
   },
-  // {
-  //   "day": 4,
-  //   "part": 1,
-  //   "component": Day0401,
-  //   "key": "2023_04_1",
-  //   "link": "04-01"
-  // },
-  // {
-  //   "day": 4,
-  //   "part": 2,
-  //   "component": Day0402,
-  //   "key": "2023_04_2",
-  //   "link": "04-02"
-  // },
+  {
+    "day": 4,
+    "part": 1,
+    "component": Day0401,
+    "key": "2023_04_1",
+    "link": "04-01"
+  },
+  {
+    "day": 4,
+    "part": 2,
+    "component": Day0402,
+    "key": "2023_04_2",
+    "link": "04-02"
+  },
   // {
   //   "day": 5,
   //   "part": 1,
