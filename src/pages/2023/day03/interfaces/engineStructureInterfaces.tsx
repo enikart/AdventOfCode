@@ -1,8 +1,14 @@
 
-export type ISymbol = Map<number, boolean>;
-export type ISymbols = Map<number, ISymbol>;
+export interface ISymbol {
+    char: string,
+    y: number,
+    x: number
+}
+
+export type ISymbols = Map<number, ISymbol[]>;
+export type INumbers = Map<number, INumber[]>;
 export interface IEngine {
-    numbers: INumber[],
+    numbers: INumbers,
     symbolsSorted: ISymbols,
     y_max: number,
     x_max: number
