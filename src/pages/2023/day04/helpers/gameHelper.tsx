@@ -12,7 +12,8 @@ export function parseCards(inputParsed: string[]): ICards
         isHaving = false;
         card = {
             having: [],
-            winning: []
+            winning: [],
+            copies: 1
         }
 
         cardParsed.forEach(cardValue => {
